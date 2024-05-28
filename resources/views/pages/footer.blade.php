@@ -59,8 +59,8 @@
 
   <!-- Copyright -->
   <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.05); font-size: 12px;">
-    
-    <a class="text-body" href="#">All Rights Reserved. Ministry of Defence - Democratic Socialist Republic.thar</a>
+    © 2024 Copyright:
+    <a class="text-body" href="#">All Rights Reserved. Ministry of Defence - Democratic Socialist Republic of Sri Lanka.nkjj</a>
   </div>
   <!-- Copyright -->
 </footer>
