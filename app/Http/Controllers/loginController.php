@@ -35,6 +35,12 @@ class loginController extends Controller
         return view('pages.login');
     }
 
+    // after sign in
+    public function dashboard()
+    {
+        return view('pages.dashboards.user');
+    }
+
     function register(){
         return view('pages.register');
     }

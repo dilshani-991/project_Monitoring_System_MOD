@@ -1,0 +1,21 @@
+.form-container {
+    position: relative;
+    width: 300px; /* Adjust this width as per your form width */
+    height: 100px; /* Adjust this height as per your form height */
+}
+
+.btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.btn-submit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.text {
+    height: 200px;
+}

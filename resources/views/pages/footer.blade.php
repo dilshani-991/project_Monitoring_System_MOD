@@ -12,7 +12,7 @@
       width: 100%;
       background-color: #13293D; /* Dark blue background */
       color: #ffc107; /* dark Yellow text color */
-      padding: 20px 0; /* Add padding to space out content */
+      padding: 5px 0; /* Add padding to space out content */
     }
     footer a.text-body {
       color: white !important; /* White text color for links */
@@ -20,6 +20,9 @@
     .small-container {
       max-width: 70%; /* Adjust the max-width as needed */
       margin: 0 auto; /* Center the container */
+    }
+    .right-align {
+      text-align: right; /* Align text to the right */
     }
   </style>
 </head>
@@ -31,7 +34,6 @@
     <!--Grid row-->
     <div class="row">
       <!--Grid column-->
-
       <div class="col-lg-6 col-md-6 mb-2">
         <p style="margin: 0; font-size: 14px;">
           Ministry of Defence, <br>
@@ -43,8 +45,8 @@
       <!--Grid column-->
 
       <!--Grid column-->
-      <div class="col-lg-6 col-md-6 mb-2">
-        <p style="margin: 0; font-size: 14px;">
+      <div class="col-lg-6 col-md-6 mb-2 right-align">
+        <p class="telephone-info" style="margin: 0; font-size: 14px;">
           Telephone Exchange:<br>
           +94 11 2430 860 up to 69 <br>
           +94 11 2430 870 up to 78 <br>

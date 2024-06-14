@@ -87,7 +87,7 @@
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="{{ asset('assets/img/logo.png') }}" alt="logo" height="60" class="d-inline-block align-text-top">
-            <h2>MINISTRY OF DEFENCE <br><span style="font-size: 1.5rem;">SRI LANKA</span></h2>
+            <h2 style="font-size: 1.5rem;">MINISTRY OF DEFENCE <br><span style="font-size: 1rem;">SRI LANKA</span></h2>
         </a>
 
         <div class="search-container ms-auto me-3">
@@ -115,7 +115,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link contact" href="{{ route('contact') }}">Contact Us</a>
+                    <a class="nav-link contact" href="">Contact Us</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">

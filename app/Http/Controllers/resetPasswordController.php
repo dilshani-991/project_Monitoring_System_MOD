@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class resetPasswordController extends Controller
 {
-    public function resetPasswordForm()
+    public function showResetPasswordForm()
     {
-        return view('pages.password-reset');
+        return view('pages.reset_password');
     }
 }

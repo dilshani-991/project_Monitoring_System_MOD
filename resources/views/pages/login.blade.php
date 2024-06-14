@@ -1,7 +1,18 @@
-<style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('signin-form');
 
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-</style>
+        // Add form validation or authentication logic here if needed
+
+        // Redirect to the dashboard page
+        window.location.href = '/user-dashboard';
+    });
+});
+
+</script>
 
 
 
@@ -15,6 +26,8 @@
 
 @section('title','Login')
 @section('content')
+<body>
+
 
   <main class="mt-5 custom-bg" >
     <div class="container">
@@ -62,7 +75,7 @@
 
                             </div><br>
                             <div class="forget-password" style="text-align: center">
-                                <a href="{{ route('forget-password') }}">Forget password</a>
+                                <a href="/forgetpassword">Forget password</a>
                             </div>
                             <br>
 
@@ -85,5 +98,7 @@
         </div>
     </div>
 </div>
+
+</body>
 
 @endsection

@@ -5,7 +5,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\resetPasswordController;
+use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\ArmyController;
+use App\Http\Controllers\NavyController;
+use App\Http\Controllers\AirforceController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +24,9 @@ use App\Http\Controllers\ResetPasswordController;
 |
 */
 
-Route::middleware('auth')->group(function(){
-    Route::view('/','welcome')->name('home');
-});
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//login
 
 Route::get('/', [HomepageController::class,'index' ])->name('homepage');
 
@@ -33,6 +35,12 @@ Route::get('/login', function () {
 });
 Route::get('/login', [loginController::class,'login'])->name('login');
 Route::post('/submitform', [loginController::class,'login'])->name('login.post');
+// after login conncet with dashboards
+Route::get('/after-signin', [loginController::class, 'dashboard'])->name('after.login');
+//Apply the midileware
+Route::get('/after-signin', [loginController::class, 'dashboard'])->name('after.login')->middleware('auth');
+
+
 
 //Register form path
 Route::get('/register', [loginController::class,'register']);
@@ -43,26 +51,36 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 // reset password
 Route::get('/resetpassword', function () {
     return view('pages.reset_password');
-Route::get('/reset-password', [ResetPasswordController::class, 'resetPasswordForm'])->name('password-reset');
+Route::get('/resetpassword', [ResetPasswordController::class, 'showResetPasswordForm'])->name('pages.reset');
 
 });
 
 
-// contact
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
 
 // forget password
 Route::get('/forgetpassword', function () {
     return view('pages.forget_password');
+Route::get('/forgetpassword', [PasswordController::class, 'showForgetPasswordForm'])->name('forget.password');
+Route::Post('/forget_password', [PasswordController::class, 'showForgetPasswordFormPost'])->name('forget.password.post');
+ // forget password -email
+ Route::get('/reset-password/{token}', [PasswordController::class, 'resetpassword'])->name('reset.password');
+// comform new password
+Route::Post('/forget_password/reset_new_password', [PasswordController::class, 'conformNewPassword'])->name('conform.password.post');
 
+Route::get('password/reset/{token}', [PasswordResetController::class, 'showResetForm'])->name('password.reset');
 
-
+$mail=Mail::to($validated['email'])->send(new PasswordController($user,$token));
 
 });
-//forget password
-Route::get('/forget-password', [PasswordController::class, 'showForgetPasswordForm'])->name('forget-password');
+// contact
+Route::get('/contact', function () {
+    return view('pages.contact');
+
+Route::get('/contact', [ContactController::class, 'contactform'])->name('contactus');
+
+});
+
+
 
 // message page
 Route::get('/message', function () {
@@ -70,30 +88,84 @@ Route::get('/message', function () {
 
 });
 
+// Army pages Routes
 
-
+// dashboard
+Route::get('/army-dashboard', [ArmyController::class, 'armydashboard'])->name('army.dashboard');
 // Army home page
 Route::get('/armyhome', function () {
     return view('pages.army.home');
 
 });
-
 // Army project list  page
 Route::get('/armyprojectlist', function () {
     return view('pages.army.project_list');
 
 });
 
+// Army project Time line  page
+Route::get('/armyprojecttimeline', function () {
+    return view('pages.army.project_timeline');
+
+});
+
+
+//Navy page Route
+
+//dashboard
+Route::get('/navy-dashboard', [NavyController::class, 'navydashboard'])->name('navy.dashboard');
+
+
+
+
+//Airforce page Route
+
+//dashboard
+Route::get('/airforce-dashboard', [AirforceController::class, 'navydashboard'])->name('airforce.dashboard');
+
+
+
 
 
 
 // side navbar
 Route::get('/sidenavbar', function () {
-    return view('pages.army.side_navbar');
+    return view('pages.sidenavbar');
 
 });
+
+
 // header  page
-Route::get('/header', function () {
-    return view('pages.header');
+Route::get('/welcome', function () {
+    return view('pages.message');
 
 });
+
+Route::get('/admin', function () {
+    return view('pages.admin');
+
+});
+
+//dashboards
+
+// main dashboard
+Route::get('/user-dashboard', [dashboardController::class, 'userdashboard'])->name('user.dashboard');
+
+// admin dashboard
+Route::get('/admin-dashboard', [dashboardController::class, 'admindashboard'])->name('admin.dashboard');
+
+
+// admin page
+//add projects
+Route::get('/add-project', [AdminController::class, 'AddProjectForm'])->name('admin.add.project');
+//view projects
+Route::get('/view-project', [AdminController::class, 'ViewProjectForm'])->name('admin.view.project');
+//Manage Admin
+Route::get('/manage-admin', [AdminController::class, 'ManageAdminForm'])->name('.manage.admin');
+//Manage User
+Route::get('/manage-user', [AdminController::class, 'ManageUserForm'])->name('.manage.user');
+
+
+
+
+

@@ -9,21 +9,11 @@
 
 
 
+ <!-- forget password page  -->
 
 
 
-
-
-
-
-
-
-
- <!-- Register page  -->
-
-
-
- @section('title','Register')
+ @section('title','forget password')
  @section('content')
 
    <main class="mt-5">
@@ -46,7 +36,7 @@
                  <div class="card">
                      <h3 class="card-header text-center">Forget Password</h3>
                      <div class="card-body">
-                         <form method="POST" action="{{route('register.post')}}">
+                         <form method="POST" action="/forget_password">
                              @csrf
 
 
@@ -60,10 +50,10 @@
 
 
                              <div class="form-group mb-3">
-                                 <input type="text" placeholder="User name" id="name" class="form-control" name="name" required autofocus>
-                                 @if ($errors->has('name'))
+                                 <input type="email" placeholder="Enter your email address" id="email" class="form-control" name="email" required autofocus>
+                                 @if ($errors->has('email'))
                                   <span class="text-danger">
-                                     {{$errors->first('name')}}
+                                     {{$errors->first('email')}}
 
                                   </span>
                                   @endif
@@ -71,10 +61,13 @@
 
                                 <br><br>
                                   <div class="text-center">
-                                    <form action="/reset-password" method="GET" style="display: inline;">
+                                    <form action="" method="GET" style="display: inline;">
+                                        <a href="/login">
                                         <button  type="submit" style="margin-right: 65px; background-color: blue; color: white; border: none; border-radius: 5px; padding: 4.5px 20px; weight:10px">Cansal</button>
-                                        <button type="submit" style="margin-left: 65px; background-color: blue; color: white; border: none; border-radius: 5px; padding: 4px 20px;">Submit</button>
-
+                                     </a>
+                                        <a href="/resetpassword">
+                                            <button type="submit" style="margin-left: 65px; background-color: blue; color: white; border: none; border-radius: 5px; padding: 4px 20px;">Submit</button>
+                                        </a>
                                     </form>
 
                                 </div>
