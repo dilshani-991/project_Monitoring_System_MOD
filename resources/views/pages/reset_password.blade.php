@@ -1,102 +1,53 @@
-@extends('pages.header')
- @extends('pages.footer')
-<style>
-    .form-group{
-        padding: 5px 5px;
-        border-radius: 10px;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-</style>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Register</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"></script>
+</head>
+
+<body>
+    <section class="bg-gray-50 dark:bg-gray-900">
+        <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <div class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+                Reset Password
+            </div>
+            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+
+                    <form action="{{ route('register.save') }}" method="POST" class="space-y-4 md:space-y-6">
+                        @csrf
 
 
+                        <div>
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                            <input type="password" name="password" id="password" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+                            @error('password')
+                            <span class="text-red-600">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <div>
+                            <label for="confirm-password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Conform password</label>
+                            <input type="confirm-password" name="password_confirmation" id="password_confirmation" placeholder="" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="">
+                            @error('password_confirmation')
+                            <span class="text-red-600">{{ $message }}</span>
+                            @enderror
+                        </div>
 
- <!-- reset password page  -->
 
+                        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Reset Password</button>
 
-
- @section('title','forget password')
- @section('content')
-
-   <main class="mt-5">
-     <div class="container">
-         <div class="row justify-content-center">
-             <div class="col-md-4 mt-5">
-
-                @if (@session()->has('success'))
-                <div class="alert alert-success">
-                    {{session()->get('success')}}
+                    </form>
                 </div>
+            </div>
+        </div>
+    </section>
+</body>
 
-                @endif
-                @if (@session()->has('error'))
-                <div class="alert alert-success">
-                    {{session()->get('error')}}
-                </div>
-
-                @endif
-                 <div class="card">
-                     <h3 class="card-header text-center">Reset Password</h3>
-                     <div class="card-body">
-                         <form method="POST" action="/forget_password/reset_new_password">
-                             @csrf
-                             <input type="text"  name="token" value="{{$token}}">
-
-
-                             <br>
-                             <div class="form-group mb-3">
-                                <input type="email" placeholder="Enter your Email address" id="email" class="form-control" name="email" required autofocus>
-                                @if ($errors->has('email'))
-                                <span class="text-danger">
-                                    {{ $errors->first('email') }}
-                                </span>
-                                @endif
-                            </div>
-                             <div class="form-group mb-3">
-                                <input type="text" placeholder="Enter your new password" id="password" class="form-control" name="password" required autofocus>
-                                @if ($errors->has('password'))
-                                <span class="text-danger">
-                                    {{ $errors->first('password') }}
-                                </span>
-                                @endif
-                            </div>
-                            <div class="form-group mb-3">
-                              <input type="text" placeholder="Conform your password" id="password" class="form-control" name="password_conform" required autofocus>
-                              @if ($errors->has('password'))
-                              <span class="text-danger">
-                                  {{ $errors->first('password') }}
-                              </span>
-                              @endif
-                          </div>
-
-
-                                <br><br>
-                                  <div class="text-center">
-                                    <form action="" method="GET" style="display: inline;">
-                                        <a href="">
-                                        <button  type="submit" style="margin-right: 65px; background-color: blue; color: white; border: none; border-radius: 5px; padding: 4.5px 20px; weight:10px">Cansal</button>
-                                     </a>
-                                        <a href="">
-                                            <button type="submit" style="margin-left: 65px; background-color: blue; color: white; border: none; border-radius: 5px; padding: 4px 20px;">Submit</button>
-                                        </a>
-                                    </form>
-
-                                </div>
-
-
-
-
-
-
-
-
-                         </form>
-                     </div>
-
-                 </div>
-
-             </div>
-
-         </div>
-     </div>
-
- @endsection
+</html>

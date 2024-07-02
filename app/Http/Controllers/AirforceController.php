@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AirforceController extends Controller
-{
+class AirforceController extends Controller{
 
-    // dashboard function
-    public function navydashboard()
+    public function airforcedashboard()
     {
-        return view('pages.navy.dashboard');
+        return view('pages.dashboards.airforce_dashboard');
     }
 }

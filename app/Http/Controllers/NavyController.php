@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 
 class NavyController extends Controller
 {
-    // dashboard
     public function navydashboard()
     {
-        return view('pages.navy.dashboard');
+        // Your logic here
+        return view('pages.dashboards.navy_dashboard');
     }
 }
+
+

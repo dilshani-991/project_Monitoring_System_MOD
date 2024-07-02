@@ -12,6 +12,10 @@
 <style>
    html, body {
             height: 100%;
+
+        }
+        body{
+            background-image: url('assets/img/');
         }
         .container {
             height: 60%;
@@ -27,13 +31,14 @@
 </head>
 <body>
   <header>
-    @include('pages.header') <!-- Assuming 'header.blade.php' is in 'pages' directory -->
+
+
   </header>
   <body>
   <div class="container d-flex align-items-center justify-content-center">
-    <main role="main" class="inner cover text-center">
-      <h1 class="cover-heading" >Welcome to project management system </h1>
-      <p class="lead" >This is the home page This is the home page This is the home page This is the home page</p>
+    <main role="main" class="inner cover text-center" align="center">
+      <h1 class="cover-heading" >Welcome to Project Monitoring System </h1>
+      <p class="lead" >Welcome To The Project Monitoring System </p>
       <p class="lead">
       <a href="{{ route('login') }}" class="btn btn-lg btn-primary">GET START</a>
 
@@ -47,9 +52,8 @@
 </body>
 
 
-  <footer>
-    @include('pages.footer') <!-- Assuming 'footer.blade.php' is in 'pages' directory -->
-  </footer>
+
+
 </body>
 </html>
 

@@ -8,6 +8,6 @@ class ArmyController extends Controller
 {
     public function armydashboard()
     {
-        return view('pages.army.dashboard');
+        return view('pages.dashboards.army_dashboard');
     }
 }

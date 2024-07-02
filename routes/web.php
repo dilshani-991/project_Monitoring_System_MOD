@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
+
 use App\Http\Controllers\PasswordController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\resetPasswordController;
@@ -12,6 +12,11 @@ use App\Http\Controllers\NavyController;
 use App\Http\Controllers\AirforceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\loginController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,8 +33,66 @@ use App\Http\Controllers\AdminController;
 
 //login
 
+// login part accoding tho the video
+
+Route::controller(AuthController::class)->group(function () {
+    Route::get('register', 'register')->name('register');
+    Route::post('register', 'registerSave')->name('register.save');
+
+    Route::get('login', 'login')->name('login');
+    Route::post('login', 'loginAction')->name('login.action');
+
+    Route::get('logout', 'logout')->middleware('auth')->name('logout');
+});
+
+// normal user route list
+Route::middleware(['auth','user-access::user'])->group(function(){
+    Route::post('/user-dashboard', [HomeController::class,'index'])->name('user.dashboard');
+
+
+
+});
+
+// admin route list
+Route::middleware(['auth','user-access::admin'])->group(function(){
+    Route::post('/admin-dashboard', [HomeController::class,'adminHome'])->name('admin.dashboard');
+
+
+});
+Route::middleware(['auth', 'user_access:army'])->group(function () {
+    Route::get('/army/dashboard', [HomeController::class, 'armyHome'])->name('army.dashboard');
+});
+Route::middleware(['auth', 'user_access:airforce'])->group(function () {
+    Route::get('/airforce/dashboard', [HomeController::class, 'airforceHome'])->name('airforce.dashboard');
+});
+
+
+
+
+
+    Route::get('/airforce/dashboard', [AirforceController::class, 'airforceHome'])->name('airforce.dashboard');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/', [HomepageController::class,'index' ])->name('homepage');
 
+/*
 Route::get('/login', function () {
     return view('login');
 });
@@ -38,14 +101,16 @@ Route::post('/submitform', [loginController::class,'login'])->name('login.post')
 // after login conncet with dashboards
 Route::get('/after-signin', [loginController::class, 'dashboard'])->name('after.login');
 //Apply the midileware
-Route::get('/after-signin', [loginController::class, 'dashboard'])->name('after.login')->middleware('auth');
+Route::get('/dashboard', function () {
+    return view('/user-dashboard');
+})->middleware('auth')->name('dashboard');
 
 
 
 //Register form path
 Route::get('/register', [loginController::class,'register']);
 Route::post('/login', [loginController::class,'registerPost'])->name('register.post');
-Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');*/
 
 
 // reset password
@@ -88,10 +153,27 @@ Route::get('/message', function () {
 
 });
 
+
+//dashboards
+
+// main dashboard
+Route::get('/user-dashboard', [dashboardController::class, 'userdashboard'])->name('user.dashboard');
+// admin dashboard
+Route::get('/admin-dashboard', [dashboardController::class, 'admindashboard'])->name('admin.dashboard');
+// navy dashboard
+
+Route::get('/navy-dashboard', [HomeController::class,'navyHome'])->name('navy.dashboard');
+// army dashboard
+Route::get('/army-dashboard', [ArmyController::class, 'armydashboard'])->name('army.dashboard');
+//dashboard
+Route::get('/airforce-dashboard', [AirforceController::class, 'airforcedashboard'])->name('airforce.dashboard');
+
+
+
+
 // Army pages Routes
 
-// dashboard
-Route::get('/army-dashboard', [ArmyController::class, 'armydashboard'])->name('army.dashboard');
+
 // Army home page
 Route::get('/armyhome', function () {
     return view('pages.army.home');
@@ -112,16 +194,12 @@ Route::get('/armyprojecttimeline', function () {
 
 //Navy page Route
 
-//dashboard
-Route::get('/navy-dashboard', [NavyController::class, 'navydashboard'])->name('navy.dashboard');
+
 
 
 
 
 //Airforce page Route
-
-//dashboard
-Route::get('/airforce-dashboard', [AirforceController::class, 'navydashboard'])->name('airforce.dashboard');
 
 
 
@@ -146,13 +224,7 @@ Route::get('/admin', function () {
 
 });
 
-//dashboards
 
-// main dashboard
-Route::get('/user-dashboard', [dashboardController::class, 'userdashboard'])->name('user.dashboard');
-
-// admin dashboard
-Route::get('/admin-dashboard', [dashboardController::class, 'admindashboard'])->name('admin.dashboard');
 
 
 // admin page

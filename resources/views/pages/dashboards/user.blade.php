@@ -61,42 +61,19 @@
           </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="/army-dashboard">
+            <a class="nav-link text-white" href="">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABbElEQVR4nL3UvUuXURQH8A8NguVLLimh6GhNvYzWoCiSlOQQLtUoTg5hW1FIEDkIgig512ZL0KAlYoqEi0ov/4E29gckERdO8fTjeeL5PYNfONx7z/fcL+fee87lhHEFi9jAOuZxoarYXayiD2fQjAF8xM16xU7jAI05XGtwDfUI3sbcf/gFjJYVa8EeutGOW7iH+yHSgU7so6mM4Aie4xF28BRTYU+wjQd4gRtlBGfwDj8jw1qcwzFe41kZwfHYcIizOXwbjvArKqEUzsfR+nO4VDpbkWld6MJajv99PEolbKI3s+4NX2VMYiKznghfJbRjF9MZX5p/Knj9QpzCcBTunbizt2Efosi/YKygNf/BxchqFg/jvibjxbdjvhmZPo6OuqYAPfiK67iKyxjEq2ixpijmweBSzCV8LvrSVjCEJbzBt9hYi+RLXIpJsSmBvPLyHcuZ4D/jyxrLcmlMe37kCaa00zGq2N8j/wabGE2LylGGSgAAAABJRU5ErkJggg==">
+                <i class="material-icons opacity-10">receipt_long</i>
               </div>
-              <span class="nav-link-text ms-1">SL Army</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="/navy-dashboard">
-              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABbElEQVR4nL3UvUuXURQH8A8NguVLLimh6GhNvYzWoCiSlOQQLtUoTg5hW1FIEDkIgig512ZL0KAlYoqEi0ov/4E29gckERdO8fTjeeL5PYNfONx7z/fcL+fee87lhHEFi9jAOuZxoarYXayiD2fQjAF8xM16xU7jAI05XGtwDfUI3sbcf/gFjJYVa8EeutGOW7iH+yHSgU7so6mM4Aie4xF28BRTYU+wjQd4gRtlBGfwDj8jw1qcwzFe41kZwfHYcIizOXwbjvArKqEUzsfR+nO4VDpbkWld6MJajv99PEolbKI3s+4NX2VMYiKznghfJbRjF9MZX5p/Knj9QpzCcBTunbizt2Efosi/YKygNf/BxchqFg/jvibjxbdjvhmZPo6OuqYAPfiK67iKyxjEq2ixpijmweBSzCV8LvrSVjCEJbzBt9hYi+RLXIpJsSmBvPLyHcuZ4D/jyxrLcmlMe37kCaa00zGq2N8j/wabGE2LylGGSgAAAABJRU5ErkJggg==">
-              </div>
-              <span class="nav-link-text ms-1">SL Navy</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="/airforce-dashboard">
-              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABbElEQVR4nL3UvUuXURQH8A8NguVLLimh6GhNvYzWoCiSlOQQLtUoTg5hW1FIEDkIgig512ZL0KAlYoqEi0ov/4E29gckERdO8fTjeeL5PYNfONx7z/fcL+fee87lhHEFi9jAOuZxoarYXayiD2fQjAF8xM16xU7jAI05XGtwDfUI3sbcf/gFjJYVa8EeutGOW7iH+yHSgU7so6mM4Aie4xF28BRTYU+wjQd4gRtlBGfwDj8jw1qcwzFe41kZwfHYcIizOXwbjvArKqEUzsfR+nO4VDpbkWld6MJajv99PEolbKI3s+4NX2VMYiKznghfJbRjF9MZX5p/Knj9QpzCcBTunbizt2Efosi/YKygNf/BxchqFg/jvibjxbdjvhmZPo6OuqYAPfiK67iKyxjEq2ixpijmweBSzCV8LvrSVjCEJbzBt9hYi+RLXIpJsSmBvPLyHcuZ4D/jyxrLcmlMe37kCaa00zGq2N8j/wabGE2LylGGSgAAAABJRU5ErkJggg==">
-              </div>
-              <span class="nav-link-text ms-1">SL Airforce</span>
+              <span class="nav-link-text ms-1">Add Project</span>
             </a>
           </li>
 
 
-        <li class="nav-item mt-3">
-          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/profile.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">person</i>
-            </div>
-            <span class="nav-link-text ms-1">Profile</span>
-          </a>
-        </li>
+
+
+
+
         <li class="nav-item">
           <a class="nav-link text-white " href="/contact">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -106,7 +83,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/sign-up.html">
+          <a  href="{{url('/logout')}}" class="nav-link text-white " href="../pages/sign-up.html">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">login</i>
             </div>
@@ -152,7 +129,7 @@
           <div class="card">
             <div class="card-header p-3 pt-2">
               <div class="icon icon-lg icon-shape bg-gradient-dark shadow-dark text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">weekend</i>
+                <i class="material-icons opacity-10">receipt_long</i>
               </div>
               <div class="text-end pt-1">
                 <p class="text-sm mb-0 text-capitalize">All Projects</p>
@@ -160,16 +137,17 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0">disply all the project to here</p>
+            <div class="card-footer p-2 d-flex justify-content-end">
+                <button class="btn" style="background-color: #007bff; border-color: #007bff; color: white;">View</button>
             </div>
+
           </div>
         </div>
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-header p-3 pt-2">
               <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">person</i>
+                <i class="material-icons opacity-10">receipt_long</i>
               </div>
               <div class="text-end pt-1">
                 <p class="text-sm mb-0 text-capitalize">Ongoing projets</p>
@@ -177,16 +155,18 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0">dispaly all the onging projects </p>
+            <div class="card-footer p-2 d-flex justify-content-end">
+                <button class="btn" style="background-color: #007bff; border-color: #007bff; color: white;">View</button>
             </div>
+
+
           </div>
         </div>
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
           <div class="card">
             <div class="card-header p-3 pt-2">
               <div class="icon icon-lg icon-shape bg-gradient-success shadow-success text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">person</i>
+                <i class="material-icons opacity-10">receipt_long</i>
               </div>
               <div class="text-end pt-1">
                 <p class="text-sm mb-0 text-capitalize">Complete Projects</p>
@@ -194,16 +174,17 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0">dispaly here all the comlpete projects</p>
+            <div class="card-footer p-2 d-flex justify-content-end">
+                <button class="btn" style="background-color: #007bff; border-color: #007bff; color: white;">View</button>
             </div>
+
           </div>
         </div>
         <div class="col-xl-3 col-sm-6">
           <div class="card">
             <div class="card-header p-3 pt-2">
               <div class="icon icon-lg icon-shape bg-gradient-info shadow-info text-center border-radius-xl mt-n4 position-absolute">
-                <i class="material-icons opacity-10">weekend</i>
+                <i class="material-icons opacity-10">receipt_long</i>
               </div>
               <div class="text-end pt-1">
                 <p class="text-sm mb-0 text-capitalize">Rejects Projects</p>
@@ -211,9 +192,10 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0">display all the rejects projects </p>
+            <div class="card-footer p-2 d-flex justify-content-end">
+                <button class="btn" style="background-color: #007bff; border-color: #007bff; color: white;">View</button>
             </div>
+
           </div>
         </div>
       </div>
@@ -289,18 +271,7 @@
             <input class="form-check-input mt-1 ms-auto" type="checkbox" id="dark-version" onclick="darkMode(this)">
           </div>
         </div>
-        <hr class="horizontal dark my-sm-4">
-        <a class="btn bg-gradient-info w-100" href="https://www.creative-tim.com/product/material-dashboard-pro">Free Download</a>
-        <a class="btn btn-outline-dark w-100" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard">View documentation</a>
-        <div class="w-100 text-center">
-          <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/material-dashboard on GitHub">Star</a>
-          <h6 class="mt-3">Thank you for sharing!</h6>
-          <a href="https://twitter.com/intent/tweet?text=Check%20Material%20UI%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
-            <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
-          </a>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-dashboard" class="btn btn-dark mb-0 me-2" target="_blank">
-            <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
-          </a>
+
         </div>
       </div>
     </div>
