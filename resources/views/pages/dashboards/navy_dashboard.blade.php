@@ -20,6 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
   <title>
      dashboard
   </title>
@@ -41,82 +42,7 @@
 
 <body class="g-sidenav-show  bg-gray-200">
     <!-- side nav bar-->
-  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
-    <div class="sidenav-header">
-      <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
-        <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">user</span>
-      </a>
-    </div>
-    <hr class="horizontal light mt-0 mb-2">
-    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link text-white active bg-gradient-primary" href="../pages/dashboard.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">dashboard</i>
-            </div>
-            <span class="nav-link-text ms-1">Dashboard</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/tables.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABbElEQVR4nL3UvUuXURQH8A8NguVLLimh6GhNvYzWoCiSlOQQLtUoTg5hW1FIEDkIgig512ZL0KAlYoqEi0ov/4E29gckERdO8fTjeeL5PYNfONx7z/fcL+fee87lhHEFi9jAOuZxoarYXayiD2fQjAF8xM16xU7jAI05XGtwDfUI3sbcf/gFjJYVa8EeutGOW7iH+yHSgU7so6mM4Aie4xF28BRTYU+wjQd4gRtlBGfwDj8jw1qcwzFe41kZwfHYcIizOXwbjvArKqEUzsfR+nO4VDpbkWld6MJajv99PEolbKI3s+4NX2VMYiKznghfJbRjF9MZX5p/Knj9QpzCcBTunbizt2Efosi/YKygNf/BxchqFg/jvibjxbdjvhmZPo6OuqYAPfiK67iKyxjEq2ixpijmweBSzCV8LvrSVjCEJbzBt9hYi+RLXIpJsSmBvPLyHcuZ4D/jyxrLcmlMe37kCaa00zGq2N8j/wabGE2LylGGSgAAAABJRU5ErkJggg=="> </div>
-            <span class="nav-link-text ms-1">SL Army</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/billing.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">receipt_long</i>
-            </div>
-            <span class="nav-link-text ms-1">SL Navy</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/virtual-reality.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">view_in_ar</i>
-            </div>
-            <span class="nav-link-text ms-1">SL Airforce</span>
-          </a>
-        </li>
 
-
-        <li class="nav-item mt-3">
-          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/profile.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">person</i>
-            </div>
-            <span class="nav-link-text ms-1">Profile</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/sign-in.html">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">login</i>
-            </div>
-            <span class="nav-link-text ms-1">Contact us</span>
-          </a>
-        </li>
-        <li class="nav-item">
-            <a href="{{url('/logout')}}" class="nav-link text-white " href="../pages/sign-up.html">
-              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="material-icons opacity-10">assignment</i>
-              </div>
-              <span class="nav-link-text ms-1">Logout</span>
-            </a>
-          </li>
-    </li>
-      </ul>
-    </div>
-
-  </aside>
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
 
     <!-- Navbar -->
@@ -127,20 +53,19 @@
 
           <h6 class="font-weight-bolder mb-0">Dashboard</h6>
         </nav>
-        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-            <div class="input-group input-group-outline">
-              <label class="form-label">Type here...</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
 
-            <li class="nav-item d-flex align-items-center">
-              <a href="../pages/sign-in.html" class="nav-link text-body font-weight-bold px-0">
-                <i class="fa fa-user me-sm-1"></i>
-                <span class="d-sm-inline d-none">user</span>
-              </a>
-            </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user">  </i> User name
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Profile</a>
+                <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
+                <div class="dropdown-divider"></div>
+
+            </div>
+        </li>
           </ul>
         </div>
       </div>
@@ -160,8 +85,8 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0">disply all the project to here</p>
+            <div class="card-footer p-2 d-flex justify-content-end">
+                <button class="btn" style="background-color: #007bff; border-color: #007bff; color: white;">View</button>
             </div>
           </div>
         </div>
@@ -177,8 +102,8 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0">dispaly all the onging projects </p>
+            <div class="card-footer p-2 d-flex justify-content-end">
+                <button class="btn" style="background-color: #007bff; border-color: #007bff; color: white;">View</button>
             </div>
           </div>
         </div>
@@ -194,8 +119,8 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0">dispaly here all the comlpete projects</p>
+            <div class="card-footer p-2 d-flex justify-content-end">
+                <button class="btn" style="background-color: #007bff; border-color: #007bff; color: white;">View</button>
             </div>
           </div>
         </div>
@@ -211,8 +136,8 @@
               </div>
             </div>
             <hr class="dark horizontal my-0">
-            <div class="card-footer p-3">
-              <p class="mb-0">display all the rejects projects </p>
+            <div class="card-footer p-2 d-flex justify-content-end">
+                <button class="btn" style="background-color: #007bff; border-color: #007bff; color: white;">View</button>
             </div>
           </div>
         </div>
@@ -571,6 +496,11 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/material-dashboard.min.js?v=3.1.0"></script>
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

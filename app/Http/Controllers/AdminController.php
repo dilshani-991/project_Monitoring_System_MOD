@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -28,4 +29,26 @@ class AdminController extends Controller
     {
         return view('pages.admin.manage_user');
     }
+
+     // manage admin
+     public function index()
+        {
+            $admins = User::where('role', 'admin')->get();
+
+            return view('pages.admin.manage_admin', compact('admins'));
+        }
+
+        public function destroy($id)
+        {
+            $admin = User::find($id);
+            if ($admin) {
+                $admin->delete();
+                return redirect()->route('manage-admin')->with('success', 'Admin removed successfully.');
+            } else {
+                return redirect()->route('manage-admin')->with('error', 'Admin  not found.');
+            }
+        }
+        
+
+
 }

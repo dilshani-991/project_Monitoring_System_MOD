@@ -61,7 +61,7 @@
           </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-white" href="">
+            <a class="nav-link text-white" href="/form_project_details">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">receipt_long</i>
               </div>
@@ -104,13 +104,7 @@
 
           <h6 class="font-weight-bolder mb-0">Dashboard</h6>
         </nav>
-        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-            <div class="input-group input-group-outline">
-              <label class="form-label">Type here...</label>
-              <input type="text" class="form-control">
-            </div>
-          </div>
+
 
             <li class="nav-item d-flex align-items-center">
               <a href="../pages/sign-in.html" class="nav-link text-body font-weight-bold px-0">

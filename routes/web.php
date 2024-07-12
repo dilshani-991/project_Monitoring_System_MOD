@@ -15,6 +15,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ApplicationFormController;
 
 
 
@@ -116,7 +119,7 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 // reset password
 Route::get('/resetpassword', function () {
     return view('pages.reset_password');
-Route::get('/resetpassword', [ResetPasswordController::class, 'showResetPasswordForm'])->name('pages.reset');
+Route::get('/resetpassword', [resetPasswordController::class, 'showResetPasswordForm'])->name('pages.reset');
 
 });
 
@@ -138,12 +141,12 @@ $mail=Mail::to($validated['email'])->send(new PasswordController($user,$token));
 
 });
 // contact
-Route::get('/contact', function () {
-    return view('pages.contact');
 
-Route::get('/contact', [ContactController::class, 'contactform'])->name('contactus');
 
-});
+Route::get('/contact', [ContactController::class, 'showform'])->name('contact.show');
+/*Route::post('/contact', [ContactController::class, 'submitform'])->name('contact.submit');*/
+
+
 
 
 
@@ -236,8 +239,39 @@ Route::get('/view-project', [AdminController::class, 'ViewProjectForm'])->name('
 Route::get('/manage-admin', [AdminController::class, 'ManageAdminForm'])->name('.manage.admin');
 //Manage User
 Route::get('/manage-user', [AdminController::class, 'ManageUserForm'])->name('.manage.user');
+// manage user
+Route::get('/manage-user', [UserController:: class, 'index'])->name('manage-user');
+Route::delete('/manage-user/{id}', [UserController::class, 'destroy'])->name('manage-user.destroy');
+//manage admin
+Route::get('/manage-admin', [AdminController:: class, 'index'])->name('manage-admin');
+Route::delete('/manage-admin/{id}', [AdminController::class, 'destroy'])->name('manage-admin.destroy');
 
 
+// application
 
+Route::get('/application', function () {
+    return view('pages.application.form');
+})->name('project_form');
+
+//form controller
+Route::get('/project_form', [ApplicationFormController::class, 'create'])->name('project_form.create');
+Route::post('/project_form', [ApplicationFormController::class, 'store'])->name('project_form.store');
+Route::get('/project-form/download/{id}', [ApplicationFormController::class, 'download'])->name('project_form.download');
+// downlord form and view by admin
+Route::get('/admin/application-forms', [AdminController::class, 'index'])->name('admin.application_forms.index');
+
+
+// project_detsils form
+Route::get('/project_details', [ApplicationController::class, 'showProjectForm'])->name('show_project_form');
+Route::post('/form_project_details', [ApplicationController::class, 'storeProjectDetails'])->name('store_project_details');
+
+//Preliminary Activities
+Route::get('/Preliminary_Activities', [ApplicationController::class, 'showActivity'])->name('viewActivity');
+
+//project objective
+Route::get('/project_objective', function () {
+    return view('pages.application.project_objectives');
+})->name('project_objective');
+/*Route::get('/project-activity', [ApplicationController::class, 'showActivity'])->name('viewActivity');*/
 
 
