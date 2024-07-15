@@ -45,8 +45,9 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/material-dashboard/pages/dashboard " target="_blank">
-        <img src="../assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
-        <span class="ms-1 font-weight-bold text-white">Admin</span>
+        <img src="{{ asset('assets/img/mod_logo.png') }}" alt="main_logo" width="20px">
+
+        <span class="ms-1 font-weight-bold text-white">Ministry of Defence</span>
       </a>
     </div>
     <hr class="horizontal light mt-0 mb-2">
@@ -57,15 +58,23 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">dashboard</i>
             </div>
-            <span class="nav-link-text ms-1">Dashboard</span>
+            <span class="nav-link-text ms-1"> Admin Dashboard</span>
           </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link text-white " href="/project- proposal">
+              <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="material-icons opacity-10">receipt_long</i>
+              </div>
+              <span class="nav-link-text ms-1">Project proposal</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link text-white " href="/view-project">
               <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                 <i class="material-icons opacity-10">receipt_long</i>
               </div>
-              <span class="nav-link-text ms-1">View projects</span>
+              <span class="nav-link-text ms-1">Add project </span>
             </a>
           </li>
 
@@ -115,11 +124,7 @@
           <h6 class="font-weight-bolder mb-0">Dashboard</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-            <div class="input-group input-group-outline">
-              <label class="form-label">Type here...</label>
-              <input type="text" class="form-control">
-            </div>
+
           </div>
 
             <li class="nav-item d-flex align-items-center">

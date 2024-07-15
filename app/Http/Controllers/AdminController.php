@@ -38,6 +38,14 @@ class AdminController extends Controller
             return view('pages.admin.manage_admin', compact('admins'));
         }
 
+    // project ptoposal
+    public function ProjectProposal()
+    {
+        return view('pages.admin.project_proposal');
+    }
+
+
+
         public function destroy($id)
         {
             $admin = User::find($id);
@@ -48,7 +56,7 @@ class AdminController extends Controller
                 return redirect()->route('manage-admin')->with('error', 'Admin  not found.');
             }
         }
-        
+
 
 
 }
