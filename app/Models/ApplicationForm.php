@@ -16,4 +16,9 @@ class ApplicationForm extends Model
         'district',
         'file_path'
     ];
+    public function getFilePathAttribute($value)
+    {
+        // Ensure the path is relative to storage/app
+        return 'uploads/' . $value;
+    }
 }

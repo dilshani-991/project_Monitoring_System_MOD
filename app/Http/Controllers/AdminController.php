@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
+use App\Models\ApplicationForm;
 
 class AdminController extends Controller
 {
@@ -38,11 +40,7 @@ class AdminController extends Controller
             return view('pages.admin.manage_admin', compact('admins'));
         }
 
-    // project ptoposal
-    public function ProjectProposal()
-    {
-        return view('pages.admin.project_proposal');
-    }
+
 
 
 
@@ -56,6 +54,36 @@ class AdminController extends Controller
                 return redirect()->route('manage-admin')->with('error', 'Admin  not found.');
             }
         }
+
+
+
+// project proposal
+public function ProjectProposal()
+{
+    $applications = ApplicationForm::all();
+    return view('pages.admin.project_proposal',compact('applications'));
+}
+
+public function downloadProposal($id)
+    {
+        // Your logic to handle the file download
+        // For example, find the proposal by its ID and return the file
+
+        $proposal = Proposal::find($id);
+
+        if ($proposal) {
+            // Assuming the file is stored in the 'storage/app/public/proposals' directory
+            $filePath = storage_path('app/public/proposals/' . $proposal->file_name);
+
+            if (file_exists($filePath)) {
+                return response()->download($filePath);
+            } else {
+                return redirect()->back()->with('error', 'File not found.');
+            }
+        } else {
+            return redirect()->back()->with('error', 'Proposal not found.');
+        }
+    }
 
 
 

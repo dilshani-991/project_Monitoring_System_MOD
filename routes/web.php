@@ -18,6 +18,8 @@ use App\Http\Controllers\loginController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ApplicationFormController;
+use App\Http\Controllers\ProjectProposalController;
+use App\Http\Controllers\AddProjectController;
 
 
 
@@ -247,6 +249,16 @@ Route::get('/manage-admin', [AdminController:: class, 'index'])->name('manage-ad
 Route::delete('/manage-admin/{id}', [AdminController::class, 'destroy'])->name('manage-admin.destroy');
 // projet proposal
 Route::get('/project- proposal', [AdminController:: class, 'ProjectProposal'])->name('project.propsal');
+Route::get('/admin/download-proposal/{id}', [AdminController::class, 'downloadProposal'])->name('admin.downloadProposal');
+Route::get('/admin/file-size/{id}', [AdminController::class, 'getFileSize'])->name('admin.getFileSize');
+Route::get('/admin/verify-file-paths', [AdminController::class, 'verifyFilePaths'])->name('admin.verifyFilePaths');
+Route::get('/admin/project_proposal', [ProjectProposalController::class, 'index'])->name('admin.project_proposal');
+
+// add project
+Route::get('/add-project', [AddProjectController::class, 'AddProjectForm'])->name('admin.add_project');
+
+
+Route::post('/add-project/store', [AddProjectController::class, 'FormStore'])->name('project.store');
 
 
 
@@ -261,9 +273,17 @@ Route::get('/application', function () {
 Route::get('/project_form', [ApplicationFormController::class, 'create'])->name('project_form.create');
 Route::post('/project_form', [ApplicationFormController::class, 'store'])->name('project_form.store');
 Route::get('/project-form/download/{id}', [ApplicationFormController::class, 'download'])->name('project_form.download');
+Route::get('/admin/proposal', [AdminController::class, 'proposal'])->name('admin.proposal');
+Route::get('/admin/proposal/download/{id}', [AdminController::class, 'downloadProposal'])->name('admin.proposal.download');
+Route::get('/admin/proposal', [App\Http\Controllers\AdminController::class, 'proposal']);
+
+Route::get('/admin/proposal', function () {
+    return view('pages.admin.project_proposal');
+})->name('admin.proposal');
 
 
 
+/*
 // project_detsils form
 Route::get('/project_details', [ApplicationController::class, 'showProjectForm'])->name('show_project_form');
 Route::post('/form_project_details', [ApplicationController::class, 'storeProjectDetails'])->name('store_project_details');

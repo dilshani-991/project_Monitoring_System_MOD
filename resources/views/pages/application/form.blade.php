@@ -22,7 +22,7 @@
     }
 
     .form-container {
-      height: 4.5in;
+      height: 5in;
       width: 10.5in;
       padding: 20px;
       border: 1px solid #ccc;
@@ -75,21 +75,25 @@
       {{ session('success') }}
     </div>
   @endif
-  
+
   <form action="{{ route('project_form.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="container">
       <h2>ADD PROJECT</h2>
       <div class="form-container">
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputtitle"><b>Project Title</b></label>
-            <input type="text" class="form-control" id="inputtitle" name="project_title" placeholder="Type Here" required>
-          </div>
-          <div class="form-group col-md-6">
-            <label for="inputsector"><b>Sector</b></label>
-            <input type="text" class="form-control" id="inputsector" name="sector" placeholder="Type Here" required>
-          </div>
+            <div class="form-group col-md-12">
+                <label for="inputtitle"><b>Project Title</b></label>
+                <input type="text" class="form-control" id="inputtitle" name="project_title" placeholder="Type Here" required>
+              </div>
+             
+
+              <div class="form-group col-md-6">
+                <label for="inputsector"><b>Sector</b></label>
+                <input type="text" class="form-control" id="inputsector" name="sector" placeholder="Type Here" required>
+              </div>
+
+
         </div>
         <p><b>Project Location:</b></p>
         <div class="form-row">
