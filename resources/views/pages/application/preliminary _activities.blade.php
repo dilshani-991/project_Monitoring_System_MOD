@@ -46,18 +46,15 @@
     .button-container {
       display: flex;
       justify-content: space-between; /* Distribute buttons to left and right */
-      width: 12in; /* Ensure buttons fill the container width */
+      width: 900px;
       margin-top: 20px;
+      gap: 10px;
+      margin-left: 200px;
     }
 
     .button-container button {
       flex: 1; /* Equal width for buttons */
     }
-    .button-container {
-            gap: 20px;
-            padding-left: 100px;
-        }
-
 
     h2 {
       text-align: center;
@@ -66,7 +63,7 @@
 </head>
 
 <body>
-<form action="{{ route('viewActivity') }}" method="POST">
+<form action="{{ route('view.Activity') }}" method="POST">
     <div class="container">
       <h2>ADD PROJECT</h2>
       <div class="form-container">
@@ -162,10 +159,37 @@
       </div>
         </div>
       </div>
-      <div class="button-container">
-      <button type="button" class="btn btn-primary">Previous</button>
-      <a href=""></a><button type="button" class="btn btn-primary">Next</button>
+
+
+    <div class="button-container">
+        <button type="button" class="btn btn-primary" id="previousButton">Back</button>
+        <button type="submit" class="btn btn-primary" id="nextButton">Next</button>
     </div>
+
+
+    <script>
+    document.getElementById('previousButton').addEventListener('click', function() {
+        window.location.href = '/project_details';
+    });
+    document.getElementById('nextButton').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = '/project_objective';
+    });
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
     </form>
   </div>
   <!-- Add Bootstrap JS and dependencies -->

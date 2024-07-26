@@ -131,11 +131,11 @@ label {
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="submitDate"><b>Submitted Date</b></label>
+                    <label for="submitDate"><b>Approval Date</b></label>
                     <input type="date" class="form-control" id="submitDate" name="submitDate" placeholder="Type Here" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="closeDate"><b>Closing Date</b></label>
+                    <label for="closeDate"><b>Due  Date</b></label>
                     <input type="date" class="form-control" id="closeDate" name="closeDate" placeholder="Type Here" required>
                 </div>
             </div>
@@ -144,10 +144,10 @@ label {
                     <label for="inputStatus">Update Status</label>
                     <select class="form-control" id="inputStatus" name="status" required>
                         <option value="">Choose...</option>
-                        <option value="Status1">New</option>
-                        <option value="Status2">Ongoing</option>
-                        <option value="Status3">Complted</option>
-                        <option value="Status3">Rejected</option>
+                        <option value="new">New</option>
+                        <option value="ongoing">Ongoing</option>
+                        <option value="complete">Complete</option>
+                        <option value="rejected">Rejected</option>
                     </select>
                 </div>
             </div>

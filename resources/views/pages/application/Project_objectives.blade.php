@@ -68,14 +68,14 @@
 </head>
 
 <body>
-  <form action="{{ route('project_objective') }}" method="POST">
+  <form action="" method="POST">
     @csrf
     <div class="container">
-      <h2>ADD PROJECT</h2>
+      <h2> PROJECT OBJECTIVE </h2>
       <div class="form-container">
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p><b>6. Project Objectives: </b></p>
+            <p><b> Project Objectives: </b></p>
             <label for="objective1">Objective i.</label>
             <textarea class="form-control" id="objective1" name="objective1" rows="1"></textarea>
           </div>
@@ -91,23 +91,23 @@
 
         <div class="form-row">
           <div class="form-group col-md-12">
-            <p><b>7. Rationale of Project:</b></p>
-            <label for="problem1"><b>7.1 Specific problems and needs to be addressed by project</b></label>
+            <p><b> Rationale of Project:</b></p>
+            <label for="problem1"><b> Specific problems and needs to be addressed by project</b></label>
           </div>
           <div class="form-group col-md-12">
-            <label for="problem1">7.1.1 What is the problem, need or the existing gap/ deficiency?</label>
+            <label for="problem1"> What is the problem, need or the existing gap/ deficiency?</label>
             <textarea class="form-control" id="problem1" name="problem1" rows="1"></textarea>
           </div>
           <div class="form-group col-md-12">
-            <label for="problem2">7.1.2 What are the root-causes, underlying causes and immediate causes that contribute to the problem or the need that the project intends to address?</label>
+            <label for="problem2"> What are the root-causes, underlying causes and immediate causes that contribute to the problem or the need that the project intends to address?</label>
             <textarea class="form-control" id="problem2" name="problem2" rows="1"></textarea>
           </div>
           <div class="form-group col-md-12">
-            <label for="problem3">7.1.3 How does this project contribute to fulfilling the existing gap in the sector?</label>
+            <label for="problem3"> How does this project contribute to fulfilling the existing gap in the sector?</label>
             <textarea class="form-control" id="problem3" name="problem3" rows="1"></textarea>
           </div>
           <div class="form-group col-md-12">
-            <label for="intervention">7.1.4 Mode of intervention of this project in addressing the gap?</label>
+            <label for="intervention"> Mode of intervention of this project in addressing the gap?</label>
             <textarea class="form-control" id="intervention" name="intervention" rows="1"></textarea>
           </div>
           <div class="form-group col-md-12">
@@ -135,9 +135,9 @@
               <tbody>
                 @for ($i = 0; $i < 5; $i++)
                 <tr>
-                  <td><input type="text" name="type_of_beneficiaries[]" class="form-control" required></td>
-                  <td><input type="number" name="no_of_beneficiaries[]" class="form-control" required></td>
-                  <td><input type="text" name="gender_ratio[]" class="form-control" required></td>
+                  <td><input type="text" name="type_of_beneficiaries[]" class="form-control" ></td>
+                  <td><input type="number" name="no_of_beneficiaries[]" class="form-control" ></td>
+                  <td><input type="text" name="gender_ratio[]" class="form-control" ></td>
                 </tr>
                 @endfor
               </tbody>
@@ -157,11 +157,25 @@
           </div>
         </div>
       </div>
-      <div class="button-container">
-        <button type="button" class="btn btn-primary">Previous</button>
-        <button type="submit" class="btn btn-primary">Next</button>
-      </div>
+
     </div>
+    <div class="button-container">
+        <button type="button" class="btn btn-primary" id="previousButton">Back</button>
+        <button type="submit" class="btn btn-primary" id="nextButton">Next</button>
+    </div>
+
+
+    <script>
+    document.getElementById('previousButton').addEventListener('click', function() {
+        window.location.href = '/Preliminary_Activities';
+    });
+    document.getElementById('nextButton').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = '/relationship';
+    });
+
+
+    </script>
   </form>
   <!-- Add Bootstrap JS and dependencies -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

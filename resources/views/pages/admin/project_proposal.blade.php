@@ -14,6 +14,7 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 20px;
+            
         }
         h1 {
             text-align: center;
@@ -46,7 +47,7 @@
     <table>
         <thead>
             <tr>
-                
+
                 <th>Project Title</th>
                 <th>Sector</th>
                 <th>Category</th>

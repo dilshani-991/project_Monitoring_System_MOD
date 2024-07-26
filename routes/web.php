@@ -128,9 +128,12 @@ Route::get('/resetpassword', [resetPasswordController::class, 'showResetPassword
 
 
 // forget password
+Route::get('/reset-password', function () {
+    return view('pages.reset_password');
+});
 Route::get('/forgetpassword', function () {
     return view('pages.forget_password');
-Route::get('/forgetpassword', [PasswordController::class, 'showForgetPasswordForm'])->name('forget.password');
+/*Route::get('/forgetpassword', [PasswordController::class, 'showForgetPasswordForm'])->name('forget.password');
 Route::Post('/forget_password', [PasswordController::class, 'showForgetPasswordFormPost'])->name('forget.password.post');
  // forget password -email
  Route::get('/reset-password/{token}', [PasswordController::class, 'resetpassword'])->name('reset.password');
@@ -139,15 +142,21 @@ Route::Post('/forget_password/reset_new_password', [PasswordController::class, '
 
 Route::get('password/reset/{token}', [PasswordResetController::class, 'showResetForm'])->name('password.reset');
 
-$mail=Mail::to($validated['email'])->send(new PasswordController($user,$token));
+$mail=Mail::to($validated['email'])->send(new PasswordController($user,$token));*/
+Route::get('/password/reset', [PasswordResetController::class, 'showResetForm'])->name('password.reset');
+
+// Process the reset password form
+Route::post('/password/reset', [PasswordResetController::class, 'resetPassword'])->name('password.update');
+
 
 });
 // contact
+Route::get('/contact', function () {
+    return view('pages.contact');
 
+});
 
-Route::get('/contact', [ContactController::class, 'showform'])->name('contact.show');
-/*Route::post('/contact', [ContactController::class, 'submitform'])->name('contact.submit');*/
-
+Route::Post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 
 
@@ -283,18 +292,41 @@ Route::get('/admin/proposal', function () {
 
 
 
-/*
-// project_detsils form
+
+// project_detsils form 1-4
 Route::get('/project_details', [ApplicationController::class, 'showProjectForm'])->name('show_project_form');
 Route::post('/form_project_details', [ApplicationController::class, 'storeProjectDetails'])->name('store_project_details');
 
-//Preliminary Activities
-Route::get('/Preliminary_Activities', [ApplicationController::class, 'showActivity'])->name('viewActivity');
+//Preliminary Activities- 5
+Route::get('/Preliminary_Activities', [ApplicationController::class, 'preliminaryActivity'])->name('view.Activity');
 
-//project objective
-Route::get('/project_objective', function () {
-    return view('pages.application.project_objectives');
-})->name('project_objective');
-/*Route::get('/project-activity', [ApplicationController::class, 'showActivity'])->name('viewActivity');*/
+//project objective 6-7
+
+Route::get('/project_objective', [ApplicationController::class, 'showProjectobject'])->name('project.objective');
+
+// relationship -8-9
+Route::get('/relationship', [ApplicationController::class, 'relationship'])->name('relationship');
+
+// project impacts 10
+Route::get('/project-impacts', [ApplicationController::class, 'projectImpacts'])->name('project.Impacts');
+
+//11-12-13
+Route::get('/aling-project', [ApplicationController::class, 'aligningProject'])->name('project.Impacts');
+
+// risk  14-15
+Route::get('/risk', [ApplicationController::class, 'risk'])->name('risk');
+
+//financing part - 16 -17
+Route::get('/financing-plan', [ApplicationController::class, 'FinancingPlan'])->name('budget.plan');
+
+// 18/19/20/
+Route::get('/implementation', [ApplicationController::class, 'genderImplementation'])->name('budget.plan');
+// 21/22/23 - implementation Arrangements
+Route::get('/implementation-arrangements', [ApplicationController::class, 'implementationArrangements'])->name('budget.plan');
+//24- Applicant Information
+Route::get('/applicant-information', [ApplicationController::class, 'applicantInformation'])->name('applicant.info');
+
+
+
 
 

@@ -102,11 +102,11 @@
             </div>
             <div class="form-row">
                 <div class="form-group half-width">
-                    <label for="inputSubmitDate">Submitted Date</label>
+                    <label for="inputSubmitDate">Approval Date</label>
                     <input type="date" class="form-control" id="inputSubmitDate">
                 </div>
                 <div class="form-group half-width">
-                    <label for="inputCloseDate">Closing Date</label>
+                    <label for="inputCloseDate">Due Date</label>
                     <input type="date" class="form-control" id="inputCloseDate">
                 </div>
             </div>

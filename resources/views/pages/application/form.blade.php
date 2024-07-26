@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
     body {
-      font-family: 'Times New Roman', Times, serif;
+      font-family: Arial, sans-serif;
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+
     }
 
     .container {
@@ -22,10 +23,10 @@
     }
 
     .form-container {
-      height: 5in;
-      width: 10.5in;
+      height: 5.3in;
+      width: 11.5in;
       padding: 20px;
-      border: 1px solid #ccc;
+      border: 1.5px solid #ccc;
       overflow-y: auto;
       margin: auto;
     }
@@ -43,8 +44,9 @@
     .button-container {
       display: flex;
       justify-content: space-between;
-      width: 90%;
+      width: 70%;
       margin-top: 20px;
+      margin-left: 155px;
     }
 
     .button-container button {
@@ -86,7 +88,7 @@
                 <label for="inputtitle"><b>Project Title</b></label>
                 <input type="text" class="form-control" id="inputtitle" name="project_title" placeholder="Type Here" required>
               </div>
-             
+
 
               <div class="form-group col-md-6">
                 <label for="inputsector"><b>Sector</b></label>

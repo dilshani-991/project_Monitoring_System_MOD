@@ -11,15 +11,63 @@ class ApplicationController extends Controller
 {
 
 
-    public function showProjectForm()
+    public function showProjectForm()// project_detsils form 1-4
     {
         return view('pages.application.project_details');
     }
+    public function preliminaryActivity()//Preliminary Activities- 5
+    {
+        return view('pages.application.preliminary _activities');
+    }
 
-    public function showProjectobject()
+    public function showProjectobject()//project objective 6-7
     {
         return view('pages.application.project_objectives');
     }
+
+    public function projectImpacts()// project impacts 10
+    {
+        return view('pages.application.project_impacts');
+    }
+
+    public function aligningProject()//11-12-13
+    {
+        return view('pages.application.11_12_13');
+    }
+
+    public function risk()//14-15
+    {
+        return view('pages.application.risk');
+    }
+    public function FinancingPlan()//16-17
+    {
+        return view('pages.application.financing_plan');
+    }
+
+    public function relationship()
+    // relationship -8-9
+    {
+        return view('pages.application.relationship');
+    }
+
+
+    public function genderImplementation()// 18/19/20/
+    {
+        return view('pages.application.gender_different_implementation');
+    }
+    public function implementationArrangements()// 21/22/23 - implementation Arrangements
+    {
+        return view('pages.application.implementation_arrangements');
+    }
+    public function applicantInformation()//24- Applicant Information
+    {
+        return view('pages.application.applicant_information ');
+    }
+
+
+
+
+
 
     public function storeProjectDetails(Request $request)
     {
