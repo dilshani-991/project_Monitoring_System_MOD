@@ -7,20 +7,25 @@
   <meta name="author" content="">
   <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
   <title>Home page</title>
 <style>
-   html, body {
-            height: 100%;
-
-        }
-        body{
-            background-image: url('assets/img/');
-        }
-        .container {
-            height: 60%;
-        }
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: "Times New Roman", Times, serif;
+        color: white;
+    }
+    body {
+        background-image: url('assets/img/spacex-OHOU-5UVIYQ-unsplash.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .container {
+        height: 100%;
+    }
 </style>
+
   <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
 
   <!-- Bootstrap core CSS -->
@@ -38,9 +43,9 @@
   <div class="container d-flex align-items-center justify-content-center">
     <main role="main" class="inner cover text-center" align="center">
       <h1 class="cover-heading" >Welcome to Project Monitoring System </h1>
-      <p class="lead" >Welcome To The Project Monitoring System </p>
+      <p class="lead" >Click Get Start to Login</p>
       <p class="lead">
-      <a href="{{ route('login') }}" class="btn btn-lg btn-primary">GET START</a>
+      <a href="/login" class="btn btn-lg btn-primary">GET START</a>
 
 
       </p>

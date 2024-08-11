@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>forget password </title>
+    <title>Forget Password</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"></script>
 </head>
 
 <body>
-    <section class="bg-blue-500 dark:bg-gray-900">
+    <section style="background-color: #F0F0F0;" class="dark:bg-gray-900 h-screen">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-            <<div class="flex items-center mb-6 text-4xl font-bold text-gray-900 dark:text-white">
-                Forget Password
-            </div>
 
-            <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+            <div class="w-full bg-white rounded-lg shadow dark:border sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-                    <p class="text-base leading-tight tracking-tight text-gray-900 md:text-lg dark:text-white">
+                    <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
+                        Forgot password
+                    </h1>    
+                    <p class="text-base leading-tight tracking-tight text-gray-900 md:text-lg dark:text-white text-left">
                         Enter the email address associated with your account to reset your password.
                     </p>
 
@@ -49,9 +49,9 @@
                         </div>
 
                         <div class="row">
-                            <div class="col -md-12"></div>
-                        <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">S</button>
-                    </div>
+                            <div class="col-md-12"></div>
+                            <button type="submit" class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
+                        </div>
                     </form>
                 </div>
             </div>
